@@ -1,0 +1,48 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    display: flex;
+  }
+
+  &__top-stripe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    background: url('/img/base/top-gradient.png') repeat-x;
+    height: 20rem;
+    color: #fff;
+    text-align: right;
+    padding: 1rem 2rem;
+  }
+
+  &__pics {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__pic {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 24rem;
+
+    @include tablet {
+      &:nth-last-child(odd){
+        display: none;
+      }
+    }
+
+    @include mobile {
+      &:nth-last-child(-n+4){
+        display: none;
+      }
+    }
+
+  }
+
+}
+

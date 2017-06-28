@@ -1,0 +1,35 @@
+@import "vars";
+@import "mixins";
+@import "typography";
+
+body {
+  margin:0;
+  padding:0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #286782;
+  padding: 2rem 4rem;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 2rem;
+  transition: all .3s;
+
+  @include mobile {
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+  }
+
+  &:hover {
+    background-color: darken(#286782, 5%);
+    box-shadow: 0 4px 17.68px 2.32px rgba(0,0,0,.11);
+  }
+
+}

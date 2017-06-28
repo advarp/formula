@@ -1,0 +1,93 @@
+.footer {
+  background-color: #efefef;
+  padding: 2.5rem 2rem;
+  display: flex;
+
+  &__rights {
+    font-size: 1.4rem;
+    color: #555559;
+  }
+
+  &__info {
+    display: flex;
+    margin-left: auto;
+
+    &-item {
+      margin-left: 3rem;
+      text-decoration: none;
+      color: #555559;
+      position: relative;
+
+      &--link:hover {
+        text-decoration: underline;
+      }
+
+      &:not(:first-child){
+        &:before {
+          content: "|";
+          position: absolute;
+          left: -2rem;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+@include tablet {
+  .footer {
+    flex-direction: column;
+
+    &__rigths {
+      display: flex;
+      order: 2;
+      margin-top: 1rem;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      order: 1;
+      &-item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    flex-direction: column;
+
+    &__rigths {
+      display: flex;
+      order: 2;
+      margin-top: 1rem;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      order: 1;
+      &-item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

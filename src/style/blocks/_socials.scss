@@ -1,0 +1,26 @@
+.socials {
+  display: flex;
+  justify-content: flex-end;
+
+  &__item {
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:not(:last-child){
+      margin-right: 2rem;
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #fff;
+    margin-right: .5rem;
+  }
+}
